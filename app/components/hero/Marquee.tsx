@@ -6,25 +6,24 @@ import { useEffect, useRef } from "react";
 function Marquee() {
   const firstText = useRef(null);
   const secondText = useRef(null);
-  let xPercent = 0;
-  let direction = -1;
 
   useEffect(() => {
+    let xPercent = 0;
+    let direction = -1;
+    const animation = () => {
+      if (xPercent <= -100) {
+        xPercent = 0;
+      }
+      if (xPercent > 0) {
+        xPercent = -100;
+      }
+      gsap.set(firstText.current, { xPercent: xPercent });
+      gsap.set(secondText.current, { xPercent: xPercent });
+      xPercent += 0.02 * direction;
+      requestAnimationFrame(animation);
+    };
     requestAnimationFrame(animation);
   }, []);
-
-  const animation = () => {
-    if (xPercent <= -100) {
-      xPercent = 0;
-    }
-    if (xPercent > 0) {
-      xPercent = -100;
-    }
-    gsap.set(firstText.current, { xPercent: xPercent });
-    gsap.set(secondText.current, { xPercent: xPercent });
-    xPercent += 0.02 * direction;
-    requestAnimationFrame(animation);
-  };
 
   return (
     <div className="slide-container">
