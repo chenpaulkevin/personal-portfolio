@@ -172,9 +172,19 @@ html.lenis {
 }
 
 .lenis.lenis-stopped {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
+}
+
+@media only screen and (width: 1280px) {
+  .container {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+  }
+  .custom-height {
+    height: 45dvh !important;
+  }
 }

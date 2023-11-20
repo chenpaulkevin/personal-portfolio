@@ -1,13 +1,40 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import FadeInWhenVisible from "../animations/fade";
+import { motion } from "framer-motion";
 
 function FeaturedWorks() {
+  const header1 = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      x: 0,
+      transition: {
+        delay: 0.05,
+        duration: 0.6,
+        ease: "easeInOut",
+      },
+    },
+    hidden: {
+      opacity: 0,
+      y: 50,
+      x: 0,
+    },
+  };
+
   return (
     <section className="my-10">
       <div className="w-full h-screen bg-primary flex justify-center items-center sticky top-0">
-        <h1 className="text-5xl md:text-6xl lg:text-7xl px-6 md:px-8 lg:px-0 text-secondary text-center font-bold container mx-auto ">
-          I like making websites.
-        </h1>
+        <motion.div
+          initial={"hidden"}
+          whileInView={"visible"}
+          variants={header1}
+        >
+          <h1 className="text-5xl md:text-6xl lg:text-7xl px-6 md:px-8 lg:px-0 text-secondary text-center font-bold container mx-auto ">
+            I like making websites.
+          </h1>
+        </motion.div>
       </div>
       <div className="w-full h-[100dvh] bg-slate-700 relative flex sticky top-0">
         <div className="z-10 container flex mx-auto px-6 md:px-8 lg:px-0">
