@@ -1,33 +1,33 @@
 "use client";
 import React from "react";
-import gsap from "gsap";
 import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+
+const marqueeVariants = {
+  animate: {
+    x: ["0%", "-100%"],
+    transition: {
+      x: {
+        repeat: Infinity,
+        repeatType: "loop",
+        duration: 60,
+        ease: "linear",
+      },
+    },
+  },
+};
 
 function Marquee() {
   const firstText = useRef(null);
   const secondText = useRef(null);
 
-  useEffect(() => {
-    let xPercent = 0;
-    let direction = -1;
-    const animation = () => {
-      if (xPercent <= -100) {
-        xPercent = 0;
-      }
-      if (xPercent > 0) {
-        xPercent = -100;
-      }
-      gsap.set(firstText.current, { xPercent: xPercent });
-      gsap.set(secondText.current, { xPercent: xPercent });
-      xPercent += 0.02 * direction;
-      requestAnimationFrame(animation);
-    };
-    requestAnimationFrame(animation);
-  }, []);
-
   return (
     <div className="slide-container">
-      <div className="slider">
+      <motion.div
+        variants={marqueeVariants}
+        animate="animate"
+        className="slider"
+      >
         <p
           ref={firstText}
           className="text-primary flex gap-4 items-center font-bold text-5xl md:text-6xl lg:text-7xl"
@@ -88,7 +88,7 @@ function Marquee() {
             &#10059;
           </span>
         </p>
-      </div>
+      </motion.div>
     </div>
   );
 }
