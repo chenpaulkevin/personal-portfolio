@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import Hero from "./components/hero/Hero";
 import FeaturedWorks from "./components/works/FeaturedWorks";
 import Brands from "./components/brand/Brands";
+import Camera from "./components/cctv/Camera";
 import Lenis from "@studio-freight/lenis";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <Hero></Hero>
       <FeaturedWorks />
       <Brands></Brands>
+      <Camera></Camera>
     </main>
   );
 }

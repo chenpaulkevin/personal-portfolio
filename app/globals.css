@@ -187,4 +187,8 @@ html.lenis {
   .custom-height {
     height: 45dvh !important;
   }
+  .custom-nav {
+    padding-left: 2.5rem !important;
+    padding-right: 3rem !important;
+  }
 }

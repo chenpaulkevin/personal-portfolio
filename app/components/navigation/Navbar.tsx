@@ -23,7 +23,7 @@ function Navbar() {
   };
   return (
     <>
-      <nav className="flex px-6 md:px-8 lg:px-0 text-primary justify-between items-center mt-8 container mx-auto">
+      <nav className="flex px-6 md:px-8 h-16 lg:px-0 text-primary justify-between items-center mt-8 container mx-auto">
         <motion.div variants={navVar} initial="hidden" whileInView="visible">
           <Image
             src="/logo.svg"
@@ -34,7 +34,12 @@ function Navbar() {
             style={{ width: "92px", height: "auto" }}
           ></Image>
         </motion.div>
-        <motion.div variants={navVar} initial="hidden" whileInView="visible">
+        <motion.div
+          className="fixed right-12 z-50"
+          variants={navVar}
+          initial="hidden"
+          whileInView="visible"
+        >
           <MenuButton />
         </motion.div>
       </nav>
