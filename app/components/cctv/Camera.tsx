@@ -4,11 +4,11 @@ const Spline = React.lazy(() => import("@splinetool/react-spline"));
 
 function Camera() {
   return (
-    <div>
+    <div className="w-full">
       <Suspense
         fallback={<div className="text-7xl text-primary">Loading...</div>}
       >
-        <Spline scene="https://prod.spline.design/dLfHbfLHnhn7ZooC/scene.splinecode" />
+        <Spline scene="https://prod.spline.design/tMrOzfs-iZZ-GrBe/scene.splinecode" />
       </Suspense>
     </div>
   );

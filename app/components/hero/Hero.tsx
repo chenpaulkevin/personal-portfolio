@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { Icon } from "@iconify/react";
+import { ArrowLongDownIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import FadeInWhenVisible from "../animations/fade";
 
@@ -111,7 +111,7 @@ function Hero() {
                 ></Image>
               </div>
               <div className="absolute">
-                <Icon icon="bi:arrow-down" className="text-primary text-4xl" />
+                <ArrowLongDownIcon className="h-10 w-10 text-primary" />
               </div>
             </div>
             <div className="h-8 w-8 bg-transparent clips absolute rounded-full  -top-8"></div>

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { Icon } from "@iconify/react";
+import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 
 function Brands() {
   return (
@@ -24,11 +24,7 @@ function Brands() {
         <div className="bg-bento row-span-4 col-span-4 lg:col-span-2 lg:row-span-6 relative rounded-2xl">
           <div className="z-10 absolute flex bottom-4 left-4 text-primary">
             <div className="w-max h-min text-2xl bg-secondary py-2 px-4 rounded-full flex items-center justify-center gap-2">
-              Apex Code PH{" "}
-              <Icon
-                icon="uis:arrow-up-right"
-                className="text-primary text-3xl"
-              />
+              Apex Code PH <ArrowUpRightIcon className="text-primary h-5 w-5" />
             </div>
           </div>
           <div className="absolute z-0 inset-0 rounded-2xl">
@@ -46,11 +42,7 @@ function Brands() {
         <div className="bg-bento row-span-4 col-span-4 md:col-span-2 lg:col-span-1 lg:row-span-2 relative rounded-2xl">
           <div className="z-10 absolute flex bottom-4 left-4 text-primary">
             <div className="w-max h-min text-2xl bg-secondary py-2 px-4 rounded-full flex items-center justify-center gap-2">
-              Apex Code PH{" "}
-              <Icon
-                icon="uis:arrow-up-right"
-                className="text-primary text-3xl"
-              />
+              Apex Code PH <ArrowUpRightIcon className="text-primary h-5 w-5" />
             </div>
           </div>
           <div className="absolute inset-0 rounded-2xl">
@@ -68,11 +60,7 @@ function Brands() {
         <div className="bg-bento row-span-4 col-span-4 md:col-span-2 lg:col-span-1 lg:row-span-2 relative rounded-2xl">
           <div className="z-10 absolute flex bottom-4 left-4 text-primary">
             <div className="w-max h-min text-2xl bg-secondary py-2 px-4 rounded-full flex items-center justify-center gap-2">
-              Apex Code PH{" "}
-              <Icon
-                icon="uis:arrow-up-right"
-                className="text-primary text-3xl"
-              />
+              Apex Code PH <ArrowUpRightIcon className="text-primary h-5 w-5" />
             </div>
           </div>
           <div className="absolute inset-0 rounded-2xl">
@@ -90,11 +78,7 @@ function Brands() {
         <div className="bg-bento row-span-4 col-span-4 lg:col-span-2 lg:row-span-2 rounded-2xl relative">
           <div className="z-10 absolute flex bottom-4 left-4 text-primary">
             <div className="w-max h-min text-2xl bg-secondary py-2 px-4 rounded-full flex items-center justify-center gap-2">
-              Apex Code PH{" "}
-              <Icon
-                icon="uis:arrow-up-right"
-                className="text-primary text-3xl"
-              />
+              Apex Code PH <ArrowUpRightIcon className="text-primary h-5 w-5" />
             </div>
           </div>
           <div className="absolute inset-0 rounded-2xl">

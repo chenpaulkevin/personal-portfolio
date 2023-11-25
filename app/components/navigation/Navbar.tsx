@@ -34,12 +34,7 @@ function Navbar() {
             style={{ width: "92px", height: "auto" }}
           ></Image>
         </motion.div>
-        <motion.div
-          className="fixed right-12 z-50"
-          variants={navVar}
-          initial="hidden"
-          whileInView="visible"
-        >
+        <motion.div variants={navVar} initial="hidden" whileInView="visible">
           <MenuButton />
         </motion.div>
       </nav>
