@@ -1,28 +1,17 @@
 "use client";
-import { useEffect } from "react";
 import Hero from "./components/hero/Hero";
 import FeaturedWorks from "./components/works/FeaturedWorks";
 import Brands from "./components/brand/Brands";
 import Camera from "./components/cctv/Camera";
-import Lenis from "@studio-freight/lenis";
+import { ReactLenis } from "@studio-freight/react-lenis";
 
 export default function Home() {
-  useEffect(() => {
-    const lenis = new Lenis();
-
-    function raf(time: any) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
   return (
-    <main>
+    <ReactLenis root>
       <Hero></Hero>
       <FeaturedWorks />
       <Brands></Brands>
       <Camera></Camera>
-    </main>
+    </ReactLenis>
   );
 }
